@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="cloud-simple-service"
+  id="myeclipse.1500444284779"
+  context-root="/cloud-simple-service"
+  j2ee-spec="6.0"
+  archive="cloud-simple-service.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
