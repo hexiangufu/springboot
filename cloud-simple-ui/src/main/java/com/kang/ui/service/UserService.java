@@ -17,7 +17,7 @@ public class UserService {
 	
 	final String SERVICE_NAME="cloud-simple-service";
 	
-	@HystrixCommand(fallbackMethod="fallbackSearchAll")
+	//@HystrixCommand(fallbackMethod="fallbackSearchAll")
 	public List<User> searchAll(){
 		return restTemplate.getForObject("http://"+SERVICE_NAME+"/user", List.class);
 	}
