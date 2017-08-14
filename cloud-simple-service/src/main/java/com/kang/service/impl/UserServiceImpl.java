@@ -1,22 +1,20 @@
 package com.kang.service.impl;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.kang.entity.User;
+import com.kang.mapper.UserMapper;
+import com.kang.service.IUserService;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
-import com.kang.dao.UserDao;
-import com.kang.module.User;
-import com.kang.service.UserService;
-
+/**
+ * <p>
+ *  服务实现类
+ * </p>
+ *
+ * @author kk
+ * @since 2017-08-10
+ */
 @Service
-public class UserServiceImpl implements UserService {
-	@Autowired
-	private UserDao userDao;
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 	
-	@Override
-	public List<User> queryAll() {
-		return userDao.queryAll();
-	}
-
 }

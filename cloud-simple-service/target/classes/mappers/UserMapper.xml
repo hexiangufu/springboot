@@ -2,8 +2,8 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
   
-<mapper namespace="com.kang.dao.UserDao">  
- 	<resultMap type="com.kang.module.User" id="userMap">  
+<mapper namespace="com.kang.mapper.UserDao">
+ 	<resultMap type="com.kang.entity.User" id="userMap">
         <id column="id" property="id"/>  
         <result column="name" property="name"/>  
         <result column="age" property="age"/>   

@@ -13,7 +13,12 @@
     	<artifactId>spring-boot-starter-parent</artifactId>
     	<version>1.5.4.RELEASE</version>
     </parent>
-    
+
+	<properties>
+		<mybatisplus-spring-boot-starter.version>1.0.4</mybatisplus-spring-boot-starter.version>
+		<mybatisplus.version>2.1-gamma</mybatisplus.version>
+	</properties>
+
     <dependencyManagement>
 	    <dependencies>
 	        <dependency>
@@ -54,6 +59,19 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
+
+		<!-- mybatis-plus begin -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatisplus-spring-boot-starter</artifactId>
+			<version>${mybatisplus-spring-boot-starter.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus</artifactId>
+			<version>${mybatisplus.version}</version>
+		</dependency>
+		<!-- mybatis-plus end -->
 	</dependencies>
 
   <build>
