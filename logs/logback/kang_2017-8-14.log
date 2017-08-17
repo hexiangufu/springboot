@@ -1,0 +1,8 @@
+2017-8-14 16:34:06 main INFO No active profile set, falling back to default profiles: default
+2017-8-14 16:34:46 main INFO Started Application in 47.779 seconds (JVM running for 51.097)
+2017-8-14 16:34:59 http-nio-8081-exec-2 DEBUG ==>  Preparing: SELECT id AS id,nickname,email,pswd,create_time AS createTime,last_login_time AS lastLoginTime,status,name,age FROM t_user 
+2017-8-14 16:35:00 http-nio-8081-exec-2 DEBUG ==> Parameters: 
+2017-8-14 16:35:00 http-nio-8081-exec-2 DEBUG <==      Total: 1
+2017-8-14 16:35:20 http-nio-8081-exec-9 DEBUG ==>  Preparing: UPDATE t_user SET nickname=?, email=?, pswd=?, create_time=?, last_login_time=?, status=?, name=?, age=? WHERE id=? 
+2017-8-14 16:35:20 http-nio-8081-exec-9 DEBUG ==> Parameters: admin(String), (String), admin(String), 2017-08-10 15:51:35.0(Timestamp), 2017-08-14 16:35:20.273(Timestamp), 1(Long), 管理员(String), 33(Integer), 1(Long)
+2017-8-14 16:35:21 http-nio-8081-exec-9 DEBUG <==    Updates: 1

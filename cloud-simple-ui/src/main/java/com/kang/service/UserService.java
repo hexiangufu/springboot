@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -31,18 +32,12 @@ public class UserService {
 	}
 
 	public List<User> selectByMap(Map<String, Object> paramMap){
-		List<User> userList = new ArrayList<User>();
-		User user = new User();
-		user.setNickname("admin");
-		user.setPswd("admin");
-		user.setName("admin");
-		user.setStatus(1L);
-		userList.add(user);
-		return userList;
+		User[] userArray= restTemplate.getForObject("http://"+SERVICE_NAME+"/user/selectByMap?nickname={nickname}&pswd={pswd}", User[].class,paramMap);
+		return Arrays.asList(userArray);
 	}
 
 	public void updateById(User user){
-
+		restTemplate.put("http://"+SERVICE_NAME+"/user/updateById",user);
 	}
 
 }

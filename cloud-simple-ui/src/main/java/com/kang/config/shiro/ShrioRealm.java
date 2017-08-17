@@ -24,7 +24,7 @@ public class ShrioRealm extends AuthorizingRealm{
         CaptchaUsernamePasswordToken token = (CaptchaUsernamePasswordToken) authcToken;
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("nickname", token.getUsername());
-        map.put("pswd", token.getPassword());
+        map.put("pswd", String.valueOf(token.getPassword()));
         User user = null;
         // 从数据库获取对应用户名密码的用户
         List<User> userList = userService.selectByMap(map);

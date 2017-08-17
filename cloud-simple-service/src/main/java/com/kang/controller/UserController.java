@@ -1,10 +1,13 @@
 package com.kang.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.kang.entity.User;
+import com.kang.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -15,7 +18,18 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2017-08-10
  */
 @RestController
-@RequestMapping("/kang/user")
+@RequestMapping("/user")
 public class UserController {
-	
+	@Autowired
+    private IUserService userService;
+
+	@GetMapping("/selectByMap")
+	public List<User> selectByMap(@RequestParam Map<String,Object> paramMap){
+        return userService.selectByMap(paramMap);
+    }
+
+    @PutMapping("/updateById")
+    public boolean updateById(@RequestBody User user){
+	    return userService.updateById(user);
+    }
 }

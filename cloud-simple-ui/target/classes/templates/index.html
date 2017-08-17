@@ -286,7 +286,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="login.html" class="btn btn-default btn-flat">注  销</a>
+                  <a href="#" class="btn btn-default btn-flat logoutBtn">注  销</a>
                 </div>
               </li>
             </ul>
@@ -306,7 +306,7 @@
     <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
-        <div class="pull-left Image">
+        <div class="pull-left image">
           <img th:src="@{/template/adminlte/dist/img/user2-160x160.jpg}" class="img-circle" alt="User Image"/>
         </div>
         <div class="pull-left info">
@@ -989,42 +989,42 @@
                   <ul class="users-list clearfix">
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user1-128x128.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">Alexander Pierce</a>
+                      <a class="users-list-name" href="#">Alexander Pierce</a>
                       <span class="users-list-date">Today</span>
                     </li>
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user8-128x128.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">Norman</a>
+                      <a class="users-list-name" href="#">Norman</a>
                       <span class="users-list-date">Yesterday</span>
                     </li>
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user7-128x128.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">Jane</a>
+                      <a class="users-list-name" href="#">Jane</a>
                       <span class="users-list-date">12 Jan</span>
                     </li>
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user6-128x128.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">John</a>
+                      <a class="users-list-name" href="#">John</a>
                       <span class="users-list-date">12 Jan</span>
                     </li>
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user2-160x160.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">Alexander</a>
+                      <a class="users-list-name" href="#">Alexander</a>
                       <span class="users-list-date">13 Jan</span>
                     </li>
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user5-128x128.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">Sarah</a>
+                      <a class="users-list-name" href="#">Sarah</a>
                       <span class="users-list-date">14 Jan</span>
                     </li>
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user4-128x128.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">Nora</a>
+                      <a class="users-list-name" href="#">Nora</a>
                       <span class="users-list-date">15 Jan</span>
                     </li>
                     <li>
                       <img th:src="@{/template/adminlte/dist/img/user3-128x128.jpg}" alt="User Image"/>
-                      <a class="users-list-name" th:href="#">Nadia</a>
+                      <a class="users-list-name" href="#">Nadia</a>
                       <span class="users-list-date">15 Jan</span>
                     </li>
                   </ul>
@@ -1561,10 +1561,17 @@
 <!-- SlimScroll -->
 <script th:src="@{/template/adminlte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
 <!-- ChartJS -->
-<script th:src="template/adminlte/bower_components/Chart.js/Chart.js}"></script>
+<script th:src="@{/template/adminlte/bower_components/Chart.js/Chart.js}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script th:src="@{/template/adminlte/dist/js/pages/dashboard2.js}"></script>
 <!-- AdminLTE for demo purposes -->
 <script th:src="@{/template/adminlte/dist/js/demo.js}"></script>
+  <script>
+    $(function(){
+        $('.logoutBtn').click(function(){
+            location.href="/logout";
+        });
+    });
+  </script>
 </body>
 </html>
